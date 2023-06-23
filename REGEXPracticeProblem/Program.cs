@@ -9,7 +9,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nEnter option to choose \n1.Check String \n2.Lowercase Sequence \n3.Find HTML Tags \n4.Exit");
+                Console.WriteLine("\nEnter option to choose \n1.Check String \n2.Lowercase Sequence \n3.Find HTML Tags \n4.Check File Name \n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -25,6 +25,9 @@
                     case 3:
                         string input = "<p>The <code>Regex</code> is a compiled representation of a regular expression.</p>";
                         validate.FindHTMLTags(input);
+                        break;
+                    case 4:
+                        validate.ValidFilesName();
                         break;
                     default:
                         flag = false;

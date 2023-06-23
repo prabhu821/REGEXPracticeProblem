@@ -12,6 +12,8 @@ namespace REGEXPracticeProblem
     {
         public string pattern = @"ab{2,3}";
         public string sequence = @"[a-z]+_[a-z]+";
+        public string tags = "<[^>]+>";
+
 
         //CHECK STRING
         public void validateString(string str)
@@ -37,6 +39,18 @@ namespace REGEXPracticeProblem
             {
                 Console.WriteLine("Input string is incorrect");
             }
+        }
+
+        //FIND HTML TAGS
+        public void FindHTMLTags(string para)
+        {
+
+            MatchCollection matches = Regex.Matches(para,tags);
+            foreach (Match match in matches)
+            {
+                Console.WriteLine(match.Value);
+            }
+
         }
     }
 }

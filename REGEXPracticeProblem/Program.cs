@@ -9,7 +9,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nEnter option to choose \n1.Check String \n2.Lowercase Sequence \n3.Exit");
+                Console.WriteLine("\nEnter option to choose \n1.Check String \n2.Lowercase Sequence \n3.Find HTML Tags \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -21,6 +21,10 @@
                     case 2:
                         string data = "abc_def_ghi_jkl_mno_pqr_stu_vwx_yz";
                         validate.ValidLowercaseSequence(data);
+                        break;
+                    case 3:
+                        string input = "<p>The <code>Regex</code> is a compiled representation of a regular expression.</p>";
+                        validate.FindHTMLTags(input);
                         break;
                     default:
                         flag = false;
